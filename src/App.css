@@ -13,6 +13,10 @@ main {
   align-items: center;
 }
 
+textarea {
+  max-width: 80vw;
+}
+
 .Whatsy {
   width: 20em;
   margin: 2em;
