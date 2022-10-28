@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
 
+  let wapLink = '';
   const languages = ['en', 'es', 'it']
   const flags = ['🇺🇸 *English:*\n', '\n\n🇦🇷 *Spanish:*\n', '\n\n🇮🇹 *Italian:*\n']
   let finalText = {en:'', es:'', it: ''};
@@ -29,7 +30,8 @@ function App() {
   
     const textTranslated = await Promise.all(getFinalText)
     const returnString = textTranslated.map((text, index) => `${flags[index]}${text}`);
-    return window.open(`https://api.whatsapp.com/send?text=${window.encodeURIComponent(returnString.join(''))}`)
+    wapLink = `whatsapp://send?text=${window.encodeURIComponent(returnString.join(''))}`
+    return window.location.assign(wapLink)
 }
 
   return (
