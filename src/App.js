@@ -29,7 +29,7 @@ function App() {
   
     const textTranslated = await Promise.all(getFinalText)
     const returnString = textTranslated.map((text, index) => `${flags[index]}${text}`);
-    return window.open(`whatsapp://send?text=${window.encodeURIComponent(returnString.join(''))}`)
+    return window.open(`https://api.whatsapp.com/send?text=${window.encodeURIComponent(returnString.join(''))}`)
 }
 
   return (
