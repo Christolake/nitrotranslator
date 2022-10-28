@@ -43,8 +43,9 @@ function App() {
         cols="50"
         onChange={handleInput}>
         </textarea>
-        <button onClick={translate}>TRANSLATE</button>
+        <button onClick={translate} className='Whatsy'>TRANSLATE and SEND</button>
       </main>
+      <footer>{new Date().getFullYear()} - Christopher Selva</footer>
     </div>
   );
 }
